@@ -1,20 +1,31 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es2018",
+    "lib": ["es2018"],
     "strict": true,
     "noImplicitAny": false,
     "sourceMap": true,
     "baseUrl": "./",
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
     "paths": {
       "@/*": [
         "app/*"
       ]
     }
   },
+  "include": [
+    "app/**/*",
+    "test/golden-master-text-test.ts"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "test/jest",
+    "test/mocha", 
+    "test/vitest"
   ]
 }

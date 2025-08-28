@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "app/**/*",
+    "test/jest/**/*",
+    "test/golden-master-text-test.ts"
+  ],
+  "compilerOptions": {
+    "types": ["jest", "node"]
+  }
+}
