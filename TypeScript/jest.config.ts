@@ -7,7 +7,9 @@ export default {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.tsx?$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json'
+    }],
   },
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' } ),
 };
